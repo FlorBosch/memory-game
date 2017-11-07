@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.score;
+package com.games.memorygame.ui.score;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.model.Score;
-import com.themobilecompany.memorygame.ui.BaseViewHolder;
+import com.games.memorygame.R;
+import com.games.memorygame.model.Score;
+import com.games.memorygame.ui.BaseViewHolder;
 
 import java.text.SimpleDateFormat;
 import java.util.List;

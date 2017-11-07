@@ -1,15 +1,15 @@
-package com.themobilecompany.memorygame.injection.module;
+package com.games.memorygame.injection.module;
 
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
 
-import com.themobilecompany.memorygame.BuildConfig;
-import com.themobilecompany.memorygame.injection.ApplicationContext;
-import com.themobilecompany.memorygame.persistence.MemoryGameDatabase;
-import com.themobilecompany.memorygame.persistence.ScoreDao;
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
-import com.themobilecompany.memorygame.persistence.ScoreLocalDataSource;
+import com.games.memorygame.BuildConfig;
+import com.games.memorygame.injection.ApplicationContext;
+import com.games.memorygame.persistence.MemoryGameDatabase;
+import com.games.memorygame.persistence.ScoreDao;
+import com.games.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.persistence.ScoreLocalDataSource;
 
 import javax.inject.Named;
 import javax.inject.Singleton;

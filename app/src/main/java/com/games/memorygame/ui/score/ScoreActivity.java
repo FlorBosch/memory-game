@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.score;
+package com.games.memorygame.ui.score;
 
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -9,9 +9,9 @@ import android.support.v7.widget.Toolbar;
 
 import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
 
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.model.Score;
-import com.themobilecompany.memorygame.ui.BaseActivity;
+import com.games.memorygame.R;
+import com.games.memorygame.model.Score;
+import com.games.memorygame.ui.BaseActivity;
 
 import java.util.List;
 

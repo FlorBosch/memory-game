@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.widget;
+package com.games.memorygame.ui.widget;
 
 
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.model.Photo;
+import com.games.memorygame.R;
+import com.games.memorygame.model.Photo;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

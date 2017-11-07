@@ -1,11 +1,11 @@
-package com.themobilecompany.memorygame;
+package com.games.memorygame;
 
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.model.game.GameStatus;
-import com.themobilecompany.memorygame.model.game.LevelFactory;
-import com.themobilecompany.memorygame.model.game.LevelType;
-import com.themobilecompany.memorygame.model.game.Player;
-import com.themobilecompany.memorygame.model.game.PlayerMode;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.model.game.GameStatus;
+import com.games.memorygame.model.game.LevelFactory;
+import com.games.memorygame.model.game.LevelType;
+import com.games.memorygame.model.game.Player;
+import com.games.memorygame.model.game.PlayerMode;
 
 import org.junit.Test;
 

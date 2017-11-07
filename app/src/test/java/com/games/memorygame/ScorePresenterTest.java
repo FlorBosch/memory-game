@@ -1,10 +1,10 @@
-package com.themobilecompany.memorygame;
+package com.games.memorygame;
 
 
-import com.themobilecompany.memorygame.model.Score;
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
-import com.themobilecompany.memorygame.ui.score.ScoreMvpView;
-import com.themobilecompany.memorygame.ui.score.ScorePresenter;
+import com.games.memorygame.model.Score;
+import com.games.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.ui.score.ScoreMvpView;
+import com.games.memorygame.ui.score.ScorePresenter;
 
 import org.junit.After;
 import org.junit.Before;

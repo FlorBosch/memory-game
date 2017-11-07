@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.util;
+package com.games.memorygame.util;
 
 
 public class Constants {

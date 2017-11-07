@@ -1,13 +1,13 @@
-package com.themobilecompany.memorygame.ui.score;
+package com.games.memorygame.ui.score;
 
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
-import com.themobilecompany.memorygame.ui.BasePresenter;
+import com.games.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.ui.BasePresenter;
 
 import javax.inject.Inject;
 
 import timber.log.Timber;
 
-import static com.themobilecompany.memorygame.util.RxUtil.call;
+import static com.games.memorygame.util.RxUtil.call;
 
 
 public class ScorePresenter extends BasePresenter<ScoreMvpView> {

@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.widget;
+package com.games.memorygame.ui.widget;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;

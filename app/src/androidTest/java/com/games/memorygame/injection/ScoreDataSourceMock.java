@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.injection;
+package com.games.memorygame.injection;
 
-import com.themobilecompany.memorygame.model.Score;
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.model.Score;
+import com.games.memorygame.persistence.ScoreDataSource;
 
 import java.util.ArrayList;
 import java.util.Date;

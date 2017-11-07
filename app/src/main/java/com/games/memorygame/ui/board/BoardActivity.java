@@ -1,19 +1,19 @@
-package com.themobilecompany.memorygame.ui.board;
+package com.games.memorygame.ui.board;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.widget.TextView;
 
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.model.Photo;
-import com.themobilecompany.memorygame.model.game.Player;
-import com.themobilecompany.memorygame.ui.BaseActivity;
-import com.themobilecompany.memorygame.ui.event.CompletionEvent;
-import com.themobilecompany.memorygame.ui.event.CardPairSelectionEvent;
-import com.themobilecompany.memorygame.ui.widget.BoardView;
-import com.themobilecompany.memorygame.ui.widget.DataContainerLayout;
-import com.themobilecompany.memorygame.ui.board.SaveScoreDialogFragment.OnCompleteListener;
+import com.games.memorygame.R;
+import com.games.memorygame.model.Photo;
+import com.games.memorygame.model.game.Player;
+import com.games.memorygame.ui.BaseActivity;
+import com.games.memorygame.ui.event.CompletionEvent;
+import com.games.memorygame.ui.event.CardPairSelectionEvent;
+import com.games.memorygame.ui.widget.BoardView;
+import com.games.memorygame.ui.widget.DataContainerLayout;
+import com.games.memorygame.ui.board.SaveScoreDialogFragment.OnCompleteListener;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -30,8 +30,8 @@ import butterknife.ButterKnife;
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 import static android.view.View.VISIBLE;
-import static com.themobilecompany.memorygame.util.Constants.SAVE_SCORE_DIALOG_KEY;
-import static com.themobilecompany.memorygame.util.DateTimeUtil.fromMilliSecondsToString;
+import static com.games.memorygame.util.Constants.SAVE_SCORE_DIALOG_KEY;
+import static com.games.memorygame.util.DateTimeUtil.fromMilliSecondsToString;
 
 public class BoardActivity extends BaseActivity implements BoardMvpView, OnCompleteListener {
 

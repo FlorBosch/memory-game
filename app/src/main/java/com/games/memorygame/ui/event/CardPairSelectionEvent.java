@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.event;
+package com.games.memorygame.ui.event;
 
 
 public class CardPairSelectionEvent {

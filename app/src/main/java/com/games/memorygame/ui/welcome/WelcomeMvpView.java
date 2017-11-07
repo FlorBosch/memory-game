@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.ui.welcome;
+package com.games.memorygame.ui.welcome;
 
 
-import com.themobilecompany.memorygame.ui.MvpView;
+import com.games.memorygame.ui.MvpView;
 
 public interface WelcomeMvpView extends MvpView {
 }

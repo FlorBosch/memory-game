@@ -1,12 +1,12 @@
-package com.themobilecompany.memorygame.injection.module;
+package com.games.memorygame.injection.module;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.themobilecompany.memorygame.injection.ApplicationContext;
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.network.GlideImageDownloader;
-import com.themobilecompany.memorygame.network.ImageDownloader;
+import com.games.memorygame.injection.ApplicationContext;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.network.GlideImageDownloader;
+import com.games.memorygame.network.ImageDownloader;
 
 import javax.inject.Singleton;
 

@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.model.game;
+package com.games.memorygame.model.game;
 
 
 public class LevelFactory {

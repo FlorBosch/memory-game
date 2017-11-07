@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui;
+package com.games.memorygame.ui;
 
 public interface Presenter<T extends MvpView> {
 

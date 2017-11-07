@@ -1,13 +1,13 @@
-package com.themobilecompany.memorygame.ui;
+package com.games.memorygame.ui;
 
 import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.injection.TestComponentRule;
-import com.themobilecompany.memorygame.ui.score.ScoreActivity;
+import com.games.memorygame.R;
+import com.games.memorygame.injection.TestComponentRule;
+import com.games.memorygame.ui.score.ScoreActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -21,8 +21,8 @@ import static android.support.test.espresso.contrib.RecyclerViewActions.scrollTo
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.themobilecompany.memorygame.ui.util.CustomViewMatcher.atPosition;
-import static com.themobilecompany.memorygame.ui.util.CustomViewMatcher.matchesItemCount;
+import static com.games.memorygame.ui.util.CustomViewMatcher.atPosition;
+import static com.games.memorygame.ui.util.CustomViewMatcher.matchesItemCount;
 import static org.hamcrest.Matchers.allOf;
 
 @RunWith(AndroidJUnit4.class)

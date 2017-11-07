@@ -1,13 +1,13 @@
-package com.themobilecompany.memorygame.ui.welcome;
+package com.games.memorygame.ui.welcome;
 
 
 import android.support.annotation.IdRes;
 
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.model.game.Level;
-import com.themobilecompany.memorygame.model.game.LevelFactory;
-import com.themobilecompany.memorygame.model.game.LevelType;
-import com.themobilecompany.memorygame.model.game.PlayerMode;
+import com.games.memorygame.R;
+import com.games.memorygame.model.game.Level;
+import com.games.memorygame.model.game.LevelFactory;
+import com.games.memorygame.model.game.LevelType;
+import com.games.memorygame.model.game.PlayerMode;
 
 import java.util.HashMap;
 import java.util.Map;

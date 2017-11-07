@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.model;
+package com.games.memorygame.model;
 
 
 import android.arch.persistence.room.Entity;

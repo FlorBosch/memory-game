@@ -1,12 +1,12 @@
-package com.themobilecompany.memorygame;
+package com.games.memorygame;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.themobilecompany.memorygame.injection.component.DaggerUiComponent;
-import com.themobilecompany.memorygame.injection.component.UiComponent;
-import com.themobilecompany.memorygame.injection.module.ApplicationModule;
-import com.themobilecompany.memorygame.injection.module.NetworkModule;
+import com.games.memorygame.injection.component.DaggerUiComponent;
+import com.games.memorygame.injection.component.UiComponent;
+import com.games.memorygame.injection.module.ApplicationModule;
+import com.games.memorygame.injection.module.NetworkModule;
 
 import timber.log.Timber;
 

@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame;
+package com.games.memorygame;
 
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;

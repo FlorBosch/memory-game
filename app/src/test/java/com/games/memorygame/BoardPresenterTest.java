@@ -1,17 +1,17 @@
-package com.themobilecompany.memorygame;
+package com.games.memorygame;
 
 
-import com.themobilecompany.memorygame.model.Photo;
-import com.themobilecompany.memorygame.model.Photos;
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.model.game.GameStatus;
-import com.themobilecompany.memorygame.model.game.PlayerMode;
-import com.themobilecompany.memorygame.network.FlickrResponse;
-import com.themobilecompany.memorygame.network.ImageDownloader;
-import com.themobilecompany.memorygame.network.MemoryGameService;
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
-import com.themobilecompany.memorygame.ui.board.BoardMvpView;
-import com.themobilecompany.memorygame.ui.board.BoardPresenter;
+import com.games.memorygame.model.Photo;
+import com.games.memorygame.model.Photos;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.model.game.GameStatus;
+import com.games.memorygame.model.game.PlayerMode;
+import com.games.memorygame.network.FlickrResponse;
+import com.games.memorygame.network.ImageDownloader;
+import com.games.memorygame.network.MemoryGameService;
+import com.games.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.ui.board.BoardMvpView;
+import com.games.memorygame.ui.board.BoardPresenter;
 
 import org.junit.After;
 import org.junit.Before;
@@ -27,7 +27,7 @@ import java.util.List;
 
 import io.reactivex.Observable;
 
-import static com.themobilecompany.memorygame.util.Constants.PHOTO_THEME;
+import static com.games.memorygame.util.Constants.PHOTO_THEME;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;

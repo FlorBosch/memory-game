@@ -1,8 +1,8 @@
-package com.themobilecompany.memorygame.network;
+package com.games.memorygame.network;
 
 
-import com.themobilecompany.memorygame.model.Photo;
-import com.themobilecompany.memorygame.model.Photos;
+import com.games.memorygame.model.Photo;
+import com.games.memorygame.model.Photos;
 
 import java.util.List;
 

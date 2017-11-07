@@ -1,9 +1,9 @@
-package com.themobilecompany.memorygame.ui.board;
+package com.games.memorygame.ui.board;
 
 
-import com.themobilecompany.memorygame.model.Photo;
-import com.themobilecompany.memorygame.model.game.Player;
-import com.themobilecompany.memorygame.ui.MvpView;
+import com.games.memorygame.model.Photo;
+import com.games.memorygame.model.game.Player;
+import com.games.memorygame.ui.MvpView;
 
 import java.util.List;
 

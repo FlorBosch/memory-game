@@ -1,10 +1,10 @@
-package com.themobilecompany.memorygame.ui;
+package com.games.memorygame.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.themobilecompany.memorygame.MemoryGameApplication;
-import com.themobilecompany.memorygame.injection.component.UiComponent;
+import com.games.memorygame.MemoryGameApplication;
+import com.games.memorygame.injection.component.UiComponent;
 
 public abstract class BaseActivity extends AppCompatActivity {
 

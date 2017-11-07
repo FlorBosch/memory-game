@@ -1,9 +1,9 @@
-package com.themobilecompany.memorygame.injection;
+package com.games.memorygame.injection;
 
-import com.themobilecompany.memorygame.model.Photo;
-import com.themobilecompany.memorygame.model.Photos;
-import com.themobilecompany.memorygame.network.FlickrResponse;
-import com.themobilecompany.memorygame.network.MemoryGameService;
+import com.games.memorygame.model.Photo;
+import com.games.memorygame.model.Photos;
+import com.games.memorygame.network.FlickrResponse;
+import com.games.memorygame.network.MemoryGameService;
 
 import java.util.ArrayList;
 import java.util.List;

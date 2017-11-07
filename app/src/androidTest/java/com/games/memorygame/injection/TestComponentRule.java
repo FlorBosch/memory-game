@@ -1,11 +1,11 @@
-package com.themobilecompany.memorygame.injection;
+package com.games.memorygame.injection;
 
 import android.content.Context;
 
-import com.themobilecompany.memorygame.MemoryGameApplication;
-import com.themobilecompany.memorygame.injection.component.DaggerTestComponent;
-import com.themobilecompany.memorygame.injection.component.TestComponent;
-import com.themobilecompany.memorygame.injection.module.ApplicationTestModule;
+import com.games.memorygame.MemoryGameApplication;
+import com.games.memorygame.injection.component.DaggerTestComponent;
+import com.games.memorygame.injection.component.TestComponent;
+import com.games.memorygame.injection.module.ApplicationTestModule;
 
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;

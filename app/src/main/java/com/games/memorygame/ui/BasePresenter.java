@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui;
+package com.games.memorygame.ui;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;

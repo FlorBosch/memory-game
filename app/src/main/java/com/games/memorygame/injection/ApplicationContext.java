@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.injection;
+package com.games.memorygame.injection;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

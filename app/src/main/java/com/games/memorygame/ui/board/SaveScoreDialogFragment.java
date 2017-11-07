@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.board;
+package com.games.memorygame.ui.board;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
-import com.themobilecompany.memorygame.R;
+import com.games.memorygame.R;
 
 
 public class SaveScoreDialogFragment extends DialogFragment {

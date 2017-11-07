@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui;
+package com.games.memorygame.ui;
 
 
 import android.support.test.InstrumentationRegistry;
@@ -6,15 +6,15 @@ import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import com.themobilecompany.memorygame.MemoryGameApplication;
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.injection.TestComponentRule;
-import com.themobilecompany.memorygame.injection.component.TestComponent;
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.model.game.LevelFactory;
-import com.themobilecompany.memorygame.model.game.LevelType;
-import com.themobilecompany.memorygame.model.game.PlayerMode;
-import com.themobilecompany.memorygame.ui.welcome.WelcomeActivity;
+import com.games.memorygame.MemoryGameApplication;
+import com.games.memorygame.R;
+import com.games.memorygame.injection.TestComponentRule;
+import com.games.memorygame.injection.component.TestComponent;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.model.game.LevelFactory;
+import com.games.memorygame.model.game.LevelType;
+import com.games.memorygame.model.game.PlayerMode;
+import com.games.memorygame.ui.welcome.WelcomeActivity;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -33,7 +33,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.assertThat;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.themobilecompany.memorygame.ui.util.CustomViewMatcher.matchesItemCount;
+import static com.games.memorygame.ui.util.CustomViewMatcher.matchesItemCount;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.core.Is.is;

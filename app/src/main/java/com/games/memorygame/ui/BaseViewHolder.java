@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui;
+package com.games.memorygame.ui;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.network;
+package com.games.memorygame.network;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

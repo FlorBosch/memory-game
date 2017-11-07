@@ -1,14 +1,14 @@
-package com.themobilecompany.memorygame.ui.welcome;
+package com.games.memorygame.ui.welcome;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 
-import com.themobilecompany.memorygame.R;
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.ui.BaseActivity;
-import com.themobilecompany.memorygame.ui.board.BoardActivity;
-import com.themobilecompany.memorygame.ui.score.ScoreActivity;
+import com.games.memorygame.R;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.ui.BaseActivity;
+import com.games.memorygame.ui.board.BoardActivity;
+import com.games.memorygame.ui.score.ScoreActivity;
 
 import javax.inject.Inject;
 

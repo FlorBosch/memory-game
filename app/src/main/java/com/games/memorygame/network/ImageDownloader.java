@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.network;
+package com.games.memorygame.network;
 
 
-import com.themobilecompany.memorygame.model.Photo;
+import com.games.memorygame.model.Photo;
 
 import java.util.List;
 

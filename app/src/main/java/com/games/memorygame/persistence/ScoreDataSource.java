@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.persistence;
+package com.games.memorygame.persistence;
 
 
-import com.themobilecompany.memorygame.model.Score;
+import com.games.memorygame.model.Score;
 
 import java.util.List;
 

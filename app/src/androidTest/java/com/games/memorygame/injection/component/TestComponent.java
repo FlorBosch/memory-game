@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.injection.component;
+package com.games.memorygame.injection.component;
 
-import com.themobilecompany.memorygame.injection.module.ApplicationTestModule;
-import com.themobilecompany.memorygame.ui.WelcomeActivityTest;
+import com.games.memorygame.injection.module.ApplicationTestModule;
+import com.games.memorygame.ui.WelcomeActivityTest;
 
 import javax.inject.Singleton;
 

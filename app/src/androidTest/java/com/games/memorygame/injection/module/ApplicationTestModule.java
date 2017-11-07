@@ -1,16 +1,16 @@
-package com.themobilecompany.memorygame.injection.module;
+package com.games.memorygame.injection.module;
 
 
 import android.app.Application;
 import android.content.Context;
 
-import com.themobilecompany.memorygame.injection.ApplicationContext;
-import com.themobilecompany.memorygame.injection.MemoryGameServiceMock;
-import com.themobilecompany.memorygame.injection.ScoreDataSourceMock;
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.network.ImageDownloader;
-import com.themobilecompany.memorygame.network.MemoryGameService;
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.injection.ApplicationContext;
+import com.games.memorygame.injection.MemoryGameServiceMock;
+import com.games.memorygame.injection.ScoreDataSourceMock;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.network.ImageDownloader;
+import com.games.memorygame.network.MemoryGameService;
+import com.games.memorygame.persistence.ScoreDataSource;
 
 import javax.inject.Singleton;
 

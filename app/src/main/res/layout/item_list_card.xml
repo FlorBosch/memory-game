@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.themobilecompany.memorygame.ui.widget.BoardCardView
+<com.games.memorygame.ui.widget.BoardCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
@@ -26,4 +26,4 @@
         android:scaleType="fitXY"
         android:visibility="gone"/>
 
-</com.themobilecompany.memorygame.ui.widget.BoardCardView>
+</com.games.memorygame.ui.widget.BoardCardView>

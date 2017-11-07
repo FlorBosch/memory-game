@@ -1,8 +1,8 @@
-package com.themobilecompany.memorygame.ui.score;
+package com.games.memorygame.ui.score;
 
 
-import com.themobilecompany.memorygame.model.Score;
-import com.themobilecompany.memorygame.ui.MvpView;
+import com.games.memorygame.model.Score;
+import com.games.memorygame.ui.MvpView;
 
 import java.util.List;
 

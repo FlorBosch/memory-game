@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.ui.welcome;
+package com.games.memorygame.ui.welcome;
 
 
-import com.themobilecompany.memorygame.ui.BasePresenter;
+import com.games.memorygame.ui.BasePresenter;
 
 import javax.inject.Inject;
 

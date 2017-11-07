@@ -1,4 +1,4 @@
-package com.themobilecompany.memorygame.ui.util;
+package com.games.memorygame.ui.util;
 
 
 import android.support.test.espresso.matcher.BoundedMatcher;

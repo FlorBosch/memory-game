@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.themobilecompany.memorygame.ui.widget.DataContainerLayout
+<com.games.memorygame.ui.widget.DataContainerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/data_container"
@@ -47,7 +47,7 @@
         android:visibility="gone"
         tools:text="20"/>
 
-    <com.themobilecompany.memorygame.ui.widget.BoardView
+    <com.games.memorygame.ui.widget.BoardView
         android:id="@+id/board_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -56,4 +56,4 @@
         android:layout_margin="10dp" />
 
 
-</com.themobilecompany.memorygame.ui.widget.DataContainerLayout>
+</com.games.memorygame.ui.widget.DataContainerLayout>

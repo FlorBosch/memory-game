@@ -1,11 +1,11 @@
-package com.themobilecompany.memorygame.network;
+package com.games.memorygame.network;
 
 
 import android.content.Context;
 
 import com.bumptech.glide.Glide;
-import com.themobilecompany.memorygame.injection.ApplicationContext;
-import com.themobilecompany.memorygame.model.Photo;
+import com.games.memorygame.injection.ApplicationContext;
+import com.games.memorygame.model.Photo;
 
 import java.util.List;
 

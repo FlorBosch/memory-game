@@ -1,7 +1,7 @@
-package com.themobilecompany.memorygame.injection.module;
+package com.games.memorygame.injection.module;
 
-import com.themobilecompany.memorygame.BuildConfig;
-import com.themobilecompany.memorygame.network.MemoryGameService;
+import com.games.memorygame.BuildConfig;
+import com.games.memorygame.network.MemoryGameService;
 
 import java.io.File;
 import java.util.Locale;

@@ -1,9 +1,9 @@
-package com.themobilecompany.memorygame.util;
+package com.games.memorygame.util;
 
 
 import android.content.Context;
 
-import com.themobilecompany.memorygame.R;
+import com.games.memorygame.R;
 
 import java.util.concurrent.TimeUnit;
 

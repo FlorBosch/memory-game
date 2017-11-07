@@ -1,13 +1,13 @@
-package com.themobilecompany.memorygame.ui.board;
+package com.games.memorygame.ui.board;
 
-import com.themobilecompany.memorygame.model.game.BoardConfiguration;
-import com.themobilecompany.memorygame.model.game.GameStatus;
-import com.themobilecompany.memorygame.model.Photo;
-import com.themobilecompany.memorygame.model.Score;
-import com.themobilecompany.memorygame.network.ImageDownloader;
-import com.themobilecompany.memorygame.network.MemoryGameService;
-import com.themobilecompany.memorygame.persistence.ScoreDataSource;
-import com.themobilecompany.memorygame.ui.BasePresenter;
+import com.games.memorygame.model.game.BoardConfiguration;
+import com.games.memorygame.model.game.GameStatus;
+import com.games.memorygame.model.Photo;
+import com.games.memorygame.model.Score;
+import com.games.memorygame.network.ImageDownloader;
+import com.games.memorygame.network.MemoryGameService;
+import com.games.memorygame.persistence.ScoreDataSource;
+import com.games.memorygame.ui.BasePresenter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,8 +17,8 @@ import javax.inject.Inject;
 
 import timber.log.Timber;
 
-import static com.themobilecompany.memorygame.util.Constants.PHOTO_THEME;
-import static com.themobilecompany.memorygame.util.RxUtil.call;
+import static com.games.memorygame.util.Constants.PHOTO_THEME;
+import static com.games.memorygame.util.RxUtil.call;
 
 public class BoardPresenter extends BasePresenter<BoardMvpView> {
 
