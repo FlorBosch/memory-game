@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Memory Game</string>
+    <string name="level_label">Level</string>
+    <string name="easy_level">Easy</string>
+    <string name="normal_level">Normal</string>
+    <string name="hard_level">Hard</string>
+    <string name="start_label">Start</string>
+    <string name="scores_label">Scores</string>
+    <string name="player_mode_label">Player mode</string>
+    <string name="single_player_mode">Single player</string>
+    <string name="multi_player_mode">Multi player</string>
+    <string name="card_picture">Card</string>
+    <string name="player">Player</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="save_score">Save your score</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_connection">Unable to retrieve data.\n Please connect to the Internet</string>
+    <string name="time_format">%1$d : %2$d</string>
+    <string name="player_score_label">Player %1$d: %2$d</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="congratulations_title">Congratulations!</string>
+    <string name="continue_playing">Do you want to continue playing?</string>
+    <string name="time_finished_title">The time has finished</string>
+    <string name="save_match">Do you want to save the match?</string>
+    <string name="error_loading_scores">An error occurred when loading scores</string>
+    <string name="error">An error occurred</string>
+</resources>
