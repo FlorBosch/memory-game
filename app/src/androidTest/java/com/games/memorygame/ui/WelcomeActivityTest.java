@@ -55,7 +55,7 @@ public class WelcomeActivityTest {
 
     @Before
     public void setUp() throws Exception {
-        TestComponent component = (TestComponent) MemoryGameApplication
+        TestComponent component = (TestComponent) MemoryGameApplication.Companion
                 .get(InstrumentationRegistry.getTargetContext())
                 .getComponent();
         component.inject(this);
@@ -64,13 +64,13 @@ public class WelcomeActivityTest {
     @Test
     public void appActivityTest() {
         assertThat(configuration.getLevel().getPointsPerMatch(),
-                is(LevelFactory.getLevel(LevelType.EASY).getPointsPerMatch()));
+                is(LevelFactory.INSTANCE.getLevel(LevelType.EASY).getPointsPerMatch()));
         assertThat(configuration.getPlayerMode(), is(PlayerMode.SINGLE_PLAYER));
         onView(withId(R.id.radio_normal)).perform(click());
         onView(withId(R.id.radio_multi_player_mode)).perform(click());
 
         assertThat(configuration.getLevel().getPointsPerMatch(),
-                is(LevelFactory.getLevel(LevelType.NORMAL).getPointsPerMatch()));
+                is(LevelFactory.INSTANCE.getLevel(LevelType.NORMAL).getPointsPerMatch()));
         assertThat(configuration.getPlayerMode(), is(PlayerMode.MULTI_PLAYER));
 
         onView(withId(R.id.btn_scores)).perform(click());
