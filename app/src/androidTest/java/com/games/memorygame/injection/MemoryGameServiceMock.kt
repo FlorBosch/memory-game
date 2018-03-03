@@ -15,7 +15,7 @@ class MemoryGameServiceMock : MemoryGameService {
     override fun getPhotos(@Query("per_page") perPage: Int,
                            @Query("text") theme: String): Observable<FlickrResponse> {
         val photos = ArrayList<Photo>()
-        (0..perPage).forEach { photos.add(Photo("Title " + it, it, "", "", it.toString())) }
+        (0 until perPage).forEach { photos.add(Photo("Title " + it, it, "", "", it.toString())) }
         return Observable.just(FlickrResponse(Photos(photos), "ok", null, ""))
     }
 

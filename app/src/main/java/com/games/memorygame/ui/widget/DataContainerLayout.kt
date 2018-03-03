@@ -48,7 +48,7 @@ class DataContainerLayout : RelativeLayout {
     }
 
     private fun setVisibility(networkError: Boolean, inProgress: Boolean) {
-        (0..childCount).forEach {
+        (0 until childCount).forEach {
             val child = getChildAt(it)
             when {
                 child.id == R.id.network_error_container -> ViewUtil.setVisibility(networkError, child)

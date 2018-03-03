@@ -10,16 +10,13 @@ import com.bumptech.glide.Glide
 import com.games.memorygame.R
 import com.games.memorygame.model.Photo
 
-import butterknife.BindView
-import butterknife.ButterKnife
-
 import com.bumptech.glide.load.engine.DiskCacheStrategy.ALL
 
 class BoardCardView : CardView {
 
-    @BindView(R.id.up_picture) lateinit var upPicture: ImageView
+    private lateinit var upPicture: ImageView
 
-    @BindView(R.id.down_picture) lateinit var downPicture: ImageView
+    private lateinit var downPicture: ImageView
 
     private var photo: Photo? = null
 
@@ -32,14 +29,10 @@ class BoardCardView : CardView {
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-        ButterKnife.bind(this)
-    }
-
     internal fun setUp(photo: Photo) {
         this.photo = photo
+        upPicture = findViewById(R.id.up_picture)
+        downPicture = findViewById(R.id.down_picture)
         Glide.with(context)
                 .load(photo.url)
                 .diskCacheStrategy(ALL)

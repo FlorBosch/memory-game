@@ -41,9 +41,7 @@ class GameStatus(val boardConfiguration: BoardConfiguration) {
         if (!boardConfiguration.isMultiPLayerMode) {
             return
         }
-        for (player in players) {
-            player.changeTurn()
-        }
+        players.forEach { it.changeTurn() }
     }
 
     fun addMatchPoint() {

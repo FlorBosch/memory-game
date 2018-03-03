@@ -40,7 +40,7 @@ class ScoreListActivityTest {
     fun testList() {
         val list = onView(allOf<View>(isDisplayed(), withId(R.id.score_list)))
         list.check(matches(matchesItemCount(11)))
-        (0..10).forEach {
+        (0 until 10).forEach {
             list.perform(scrollToPosition<RecyclerView.ViewHolder>(it))
             list.check(matches(atPosition(it, withText("User " + it), R.id.user_name)))
             list.check(matches(atPosition(it, withText("27/08/2017"), R.id.date)))

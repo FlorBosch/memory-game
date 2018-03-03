@@ -40,7 +40,7 @@ class ScorePresenterTest {
     private val scores: List<Score>
         get() {
             val scores = ArrayList<Score>()
-            (0..29).forEach { scores.add(Score("Player " + it, it)) }
+            (0 until 29).forEach { scores.add(Score("Player " + it, it)) }
             return scores
         }
 

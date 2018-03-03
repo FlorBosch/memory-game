@@ -27,12 +27,8 @@ class BoardView : GridLayout {
 
 
     fun setUp(photos: List<Photo>, rows: Int, columns: Int) {
-        cardsToFlip = photos.size
-        orientation = GridLayout.HORIZONTAL
-        columnCount = columns
-        rowCount = rows
-        (0..rows).forEach { r ->
-            (0..columns).forEach { c -> addView(buildView(photos[r * (rows - 1) + c], r, c)) }
+        (0 until rows).forEach { r ->
+            (0 until columns).forEach { c -> addView(buildView(photos[r * (rows - 1) + c], r, c)) }
         }
     }
 

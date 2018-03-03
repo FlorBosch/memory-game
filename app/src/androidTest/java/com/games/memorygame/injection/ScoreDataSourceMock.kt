@@ -14,9 +14,7 @@ class ScoreDataSourceMock : ScoreDataSource {
 
     override fun loadScores(): Flowable<List<Score>> {
         val date = GregorianCalendar(2017, 7, 27).time
-        for (i in 0..10) {
-            scores.add(Score("User " + i, i, i.toString(), date))
-        }
+        (0 until 10).forEach { scores.add(Score("User " + it, it, it.toString(), date)) }
         return Flowable.just(scores)
     }
 

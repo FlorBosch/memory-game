@@ -17,9 +17,9 @@ constructor(@param:ApplicationContext private val context: Context) : ImageDownl
     // TODO Each photo could be downloaded in a different thread and not in the same
     @Throws(Exception::class)
     override fun downloadPhotos(photos: List<Photo>) {
-        for (photo in photos) {
+        photos.forEach {
             Glide.with(context)
-                    .load(photo.url)
+                    .load(it.url)
                     .downloadOnly(SIZE_ORIGINAL, SIZE_ORIGINAL)
                     .get()
         }

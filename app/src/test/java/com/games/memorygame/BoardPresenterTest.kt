@@ -113,7 +113,7 @@ class BoardPresenterTest {
 
     private fun getFlickrResponse(numberOfPhotos: Int): FlickrResponse {
         val photos = ArrayList<Photo>()
-        (0..numberOfPhotos).forEach {
+        (0 until numberOfPhotos).forEach {
             photos.add(Photo("Title " + it, it, "", "", it.toString()))
         }
         return FlickrResponse(Photos(photos), "ok", null, "")

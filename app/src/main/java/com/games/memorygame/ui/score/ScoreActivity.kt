@@ -4,8 +4,6 @@ import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
 
 import android.support.v7.widget.DividerItemDecoration.VERTICAL
 
@@ -15,28 +13,24 @@ import com.games.memorygame.ui.BaseActivity
 
 import javax.inject.Inject
 
-import butterknife.BindView
-import butterknife.ButterKnife
+import kotlinx.android.synthetic.main.activity_score.toolbar
+import kotlinx.android.synthetic.main.activity_score.score_list
+
 
 class ScoreActivity : BaseActivity(), ScoreMvpView {
 
-    @BindView(R.id.score_list) lateinit var scoresView: RecyclerView
-
     @Inject lateinit var presenter: ScorePresenter
-
-    @BindView(R.id.toolbar) lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_score)
         activityComponent()!!.inject(this)
-        ButterKnife.bind(this)
         presenter.attachView(this)
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
-        scoresView.layoutManager = LinearLayoutManager(this)
-        scoresView.addItemDecoration(DividerItemDecoration(scoresView.context, VERTICAL))
+        score_list.layoutManager = LinearLayoutManager(this)
+        score_list.addItemDecoration(DividerItemDecoration(score_list.context, VERTICAL))
         presenter.loadScores()
     }
 
@@ -46,7 +40,7 @@ class ScoreActivity : BaseActivity(), ScoreMvpView {
     }
 
     override fun displayScores(scores: List<Score>) {
-        scoresView.swapAdapter(ScoreListViewAdapter(scores), false)
+        score_list.swapAdapter(ScoreListViewAdapter(scores), false)
     }
 
     override fun onError() {

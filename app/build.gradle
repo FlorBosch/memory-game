@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
@@ -33,7 +35,6 @@ android {
 }
 
 dependencies {
-    final BUTTERKNIFE_VERSION = '8.8.1'
     final DAGGER_VERSION = '2.6'
     final SUPPORT_LIBRARY_VERSION = '26.1.0'
     final ESPRESSO_VERSION = '2.2.2'
@@ -52,11 +53,9 @@ dependencies {
     compile "com.android.support:gridlayout-v7:$SUPPORT_LIBRARY_VERSION"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
-    compile "com.jakewharton:butterknife:$BUTTERKNIFE_VERSION"
-    kapt "com.jakewharton:butterknife-compiler:$BUTTERKNIFE_VERSION"
-
     compile "com.google.dagger:dagger:$DAGGER_VERSION"
     kapt "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
 
     compile "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
     compile "com.squareup.retrofit2:adapter-rxjava2:$RETROFIT_VERSION"

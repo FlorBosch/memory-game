@@ -2,7 +2,6 @@ package com.games.memorygame.ui.welcome
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.RadioGroup
 
 import com.games.memorygame.R
 import com.games.memorygame.model.game.BoardConfiguration
@@ -11,10 +10,11 @@ import com.games.memorygame.ui.board.BoardActivity
 import com.games.memorygame.ui.score.ScoreActivity
 
 import javax.inject.Inject
+import kotlinx.android.synthetic.main.activity_welcome.level_options
+import kotlinx.android.synthetic.main.activity_welcome.player_mode_options
+import kotlinx.android.synthetic.main.activity_welcome.btn_start
+import kotlinx.android.synthetic.main.activity_welcome.btn_scores
 
-import butterknife.BindView
-import butterknife.ButterKnife
-import butterknife.OnClick
 
 class WelcomeActivity : BaseActivity(), WelcomeMvpView {
 
@@ -22,15 +22,10 @@ class WelcomeActivity : BaseActivity(), WelcomeMvpView {
 
     @Inject lateinit var boardConfiguration: BoardConfiguration
 
-    @BindView(R.id.level_options) lateinit var levelOptions: RadioGroup
-
-    @BindView(R.id.player_mode_options) lateinit var playerModeOptions: RadioGroup
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
         activityComponent()!!.inject(this)
-        ButterKnife.bind(this)
         presenter.attachView(this)
         setUpConfig()
     }
@@ -40,21 +35,13 @@ class WelcomeActivity : BaseActivity(), WelcomeMvpView {
         presenter.detachView()
     }
 
-    @OnClick(R.id.btn_start)
-    fun onStartClick() {
-        startActivity(Intent(this, BoardActivity::class.java))
-    }
-
-    @OnClick(R.id.btn_scores)
-    fun onScoreClick() {
-        startActivity(Intent(this, ScoreActivity::class.java))
-    }
-
     private fun setUpConfig() {
-        setLevelValue(levelOptions.checkedRadioButtonId)
-        setPlayerModelValue(playerModeOptions.checkedRadioButtonId)
-        levelOptions.setOnCheckedChangeListener { _, id -> setLevelValue(id) }
-        playerModeOptions.setOnCheckedChangeListener { _, id -> setPlayerModelValue(id) }
+        setLevelValue(level_options.checkedRadioButtonId)
+        setPlayerModelValue(player_mode_options.checkedRadioButtonId)
+        level_options.setOnCheckedChangeListener { _, id -> setLevelValue(id) }
+        player_mode_options.setOnCheckedChangeListener { _, id -> setPlayerModelValue(id) }
+        btn_start.setOnClickListener { startActivity(Intent(this, BoardActivity::class.java)) }
+        btn_scores.setOnClickListener { startActivity(Intent(this, ScoreActivity::class.java)) }
     }
 
     private fun setLevelValue(checkedId: Int) {
