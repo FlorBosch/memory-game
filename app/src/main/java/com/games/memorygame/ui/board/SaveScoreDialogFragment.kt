@@ -12,14 +12,14 @@ import com.games.memorygame.R
 
 class SaveScoreDialogFragment : DialogFragment() {
 
-    private var listener: OnCompleteListener? = null
+    private lateinit var listener: OnCompleteListener
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         try {
-            this.listener = context as OnCompleteListener?
+            listener = context as OnCompleteListener
         } catch (e: ClassCastException) {
-            throw ClassCastException(context!!.toString() + " must implement OnCompleteListener")
+            throw ClassCastException(context?.toString() + " must implement OnCompleteListener")
         }
 
     }
@@ -31,10 +31,10 @@ class SaveScoreDialogFragment : DialogFragment() {
                 .setCancelable(true)
                 .setPositiveButton(R.string.save) { _, _ ->
                     val editText = dialog.findViewById<TextInputEditText>(R.id.insert_player)
-                    listener!!.onComplete(editText.text.toString())
+                    listener.onComplete(editText.text.toString())
                 }
                 .setNegativeButton(R.string.cancel
-                ) { _, _ -> listener!!.onComplete(null) }
+                ) { _, _ -> listener.onComplete(null) }
                 .create()
     }
 

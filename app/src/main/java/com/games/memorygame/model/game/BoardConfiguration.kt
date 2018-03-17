@@ -6,20 +6,16 @@ import javax.inject.Singleton
 @Singleton
 class BoardConfiguration {
 
-    var level: Level? = null
-    var playerMode: PlayerMode? = null
+    var level: Level = LevelFactory.getLevel(LevelType.EASY)
+    var playerMode: PlayerMode = PlayerMode.SINGLE_PLAYER
 
     val rows: Int
-        get() = level!!.rows
+        get() = level.rows
 
     val columns: Int
-        get() = level!!.columns
+        get() = level.columns
 
     val isMultiPLayerMode: Boolean
         get() = playerMode == PlayerMode.MULTI_PLAYER
 
-    init {
-        this.level = LevelFactory.getLevel(LevelType.EASY)
-        this.playerMode = PlayerMode.SINGLE_PLAYER
-    }
 }

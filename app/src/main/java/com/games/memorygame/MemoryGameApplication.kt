@@ -12,7 +12,7 @@ import timber.log.Timber
 
 class MemoryGameApplication : Application() {
 
-    var component: UiComponent? = null
+    lateinit var component: UiComponent
 
     override fun onCreate() {
         super.onCreate()

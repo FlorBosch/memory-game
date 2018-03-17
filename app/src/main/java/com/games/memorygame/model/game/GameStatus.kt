@@ -7,18 +7,11 @@ import javax.inject.Singleton
 
 @Singleton
 class GameStatus(val boardConfiguration: BoardConfiguration) {
+
     private val players = ArrayList<Player>()
 
-    val winner: Player
-        get() {
-            var winner = players[0]
-            players.forEach {
-                if (it.score > winner.score) {
-                    winner = it
-                }
-            }
-            return winner
-        }
+    val winner: Player?
+        get() = players.maxBy { it.score }
 
     val numberOfCards: Int
         get() = boardConfiguration.rows * boardConfiguration.columns
@@ -33,9 +26,7 @@ class GameStatus(val boardConfiguration: BoardConfiguration) {
         }
     }
 
-    fun getPlayers(): List<Player> {
-        return players
-    }
+    fun getPlayers() = players
 
     fun changeTurn() {
         if (!boardConfiguration.isMultiPLayerMode) {
@@ -45,7 +36,7 @@ class GameStatus(val boardConfiguration: BoardConfiguration) {
     }
 
     fun addMatchPoint() {
-        playerTurn!!.addPoints(boardConfiguration.level!!.pointsPerMatch)
+        playerTurn?.addPoints(boardConfiguration.level.pointsPerMatch)
     }
 
 }

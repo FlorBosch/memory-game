@@ -8,15 +8,13 @@ import com.games.memorygame.injection.component.UiComponent
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    private var uiComponent: UiComponent? = null
+    private lateinit var uiComponent: UiComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         uiComponent = MemoryGameApplication.get(this).component
     }
 
-    fun activityComponent(): UiComponent? {
-        return uiComponent
-    }
+    fun activityComponent(): UiComponent = uiComponent
 
 }

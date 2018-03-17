@@ -27,9 +27,7 @@ abstract class BasePresenter<T : MvpView> : Presenter<T> {
     }
 
     protected fun assertViewAttached() {
-        if (!this.isViewAttached) {
-            throw ViewNotAttachedException()
-        }
+        if (!this.isViewAttached) throw ViewNotAttachedException()
     }
 
     class ViewNotAttachedException : RuntimeException("Call Presenter.attachView(MvpView)")

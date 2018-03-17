@@ -40,7 +40,7 @@ class BoardActivity : BaseActivity(), BoardMvpView, OnCompleteListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_board)
-        activityComponent()!!.inject(this)
+        activityComponent().inject(this)
         requestedOrientation = if (resources.getBoolean(R.bool.is_tablet))
             SCREEN_ORIENTATION_LANDSCAPE
         else
@@ -54,9 +54,7 @@ class BoardActivity : BaseActivity(), BoardMvpView, OnCompleteListener {
     override fun onDestroy() {
         super.onDestroy()
         EventBus.getDefault().unregister(this)
-        if (countDownTimer != null) {
-            countDownTimer!!.cancel()
-        }
+        countDownTimer?.cancel()
         presenter.detachView()
     }
 
@@ -80,9 +78,7 @@ class BoardActivity : BaseActivity(), BoardMvpView, OnCompleteListener {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onCompletionEvent(event: CompletionEvent) {
-        if (countDownTimer != null) {
-            countDownTimer!!.cancel()
-        }
+        countDownTimer?.cancel()
         AlertDialog.Builder(this)
                 .setTitle(R.string.congratulations_title)
                 .setMessage(R.string.continue_playing)
@@ -103,9 +99,7 @@ class BoardActivity : BaseActivity(), BoardMvpView, OnCompleteListener {
 
     override fun updatePlayerTurn(players: List<Player>) {
         first_player_score.isSelected = players[0].hasTurn()
-        if (players.size == 2) {
-            second_player_score.isSelected = players[1].hasTurn()
-        }
+        if (players.size == 2) second_player_score.isSelected = players[1].hasTurn()
     }
 
     override fun setUpTimer(seconds: Int) {
@@ -117,17 +111,15 @@ class BoardActivity : BaseActivity(), BoardMvpView, OnCompleteListener {
             }
 
             override fun onFinish() {
-                countDownTimer!!.cancel()
+                countDownTimer?.cancel()
                 showOnTimeFinishedDialog()
             }
         }
-        countDownTimer!!.start()
+        countDownTimer?.start()
     }
 
     override fun onComplete(userName: String?) {
-        if (userName != null && !userName.isEmpty()) {
-            presenter.saveScore(userName)
-        }
+        userName?.takeIf { it.isNotEmpty() }?.let { presenter.saveScore(it) }
         super.onBackPressed()
     }
 

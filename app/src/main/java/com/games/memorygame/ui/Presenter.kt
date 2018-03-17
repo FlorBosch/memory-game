@@ -1,6 +1,6 @@
 package com.games.memorygame.ui
 
-interface Presenter<T : MvpView> {
+interface Presenter<in T : MvpView> {
 
     fun attachView(view: T)
 

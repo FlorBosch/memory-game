@@ -15,7 +15,7 @@ import dagger.Provides
 
 
 @Module
-class ApplicationModule(protected val application: Application) {
+class ApplicationModule(private val application: Application) {
 
     @Provides
     fun provideApplication(): Application = application

@@ -10,9 +10,7 @@ import io.reactivex.Flowable
 class ScoreLocalDataSource @Inject
 constructor(private val scoreDao: ScoreDao) : ScoreDataSource {
 
-    override fun loadScores(): Flowable<List<Score>> {
-        return scoreDao.allScores
-    }
+    override fun loadScores(): Flowable<List<Score>> = scoreDao.allScores
 
     override fun addScore(score: Score) {
         scoreDao.insertScore(score)

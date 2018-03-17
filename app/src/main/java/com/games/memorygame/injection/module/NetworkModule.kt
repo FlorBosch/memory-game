@@ -11,9 +11,7 @@ import javax.inject.Singleton
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
-import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
-import okhttp3.Request
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -26,11 +24,7 @@ import java.lang.String.format
 @Module
 class NetworkModule(cacheFile: File) {
 
-    private val cacheFile: File
-
-    init {
-        this.cacheFile = File(cacheFile, "responses")
-    }
+    private val cacheFile: File = File(cacheFile, "responses")
 
     @Provides
     @Singleton

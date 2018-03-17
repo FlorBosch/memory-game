@@ -16,25 +16,24 @@ import org.greenrobot.eventbus.EventBus
 import java.util.ArrayList
 
 
-class BoardView : GridLayout {
+class BoardView @JvmOverloads constructor(
+        context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
+        GridLayout(context, attrs, defStyleAttr) {
 
     private var flippedCards: MutableList<BoardCardView> = ArrayList()
     private var cardsToFlip = 0
 
-    constructor(context: Context?, attrs: AttributeSet?, defStyle: Int) : super(context, attrs, defStyle)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?) : super(context)
-
-
     fun setUp(photos: List<Photo>, rows: Int, columns: Int) {
+        cardsToFlip = photos.size
+        orientation = GridLayout.HORIZONTAL
+        columnCount = columns
+        rowCount = rows
         (0 until rows).forEach { r ->
             (0 until columns).forEach { c -> addView(buildView(photos[r * (rows - 1) + c], r, c)) }
         }
     }
 
-    private fun canFlip(view: BoardCardView): Boolean {
-        return flippedCards.size < 2 && view.isFlippedDown
-    }
+    private fun canFlip(view: BoardCardView): Boolean = flippedCards.size < 2 && view.isFlippedDown
 
     private fun buildView(photo: Photo, row: Int, column: Int): BoardCardView {
         val view = View.inflate(context, R.layout.item_list_card, null) as BoardCardView
@@ -46,12 +45,11 @@ class BoardView : GridLayout {
         view.layoutParams = params
         view.setUp(photo)
         view.setOnClickListener { _ ->
-            if (!canFlip(view)) {
-                return@setOnClickListener
+            if (canFlip(view)) {
+                flippedCards.add(view)
+                view.flipUp()
+                checkMatches()
             }
-            flippedCards.add(view)
-            view.flipUp()
-            checkMatches()
         }
         return view
     }
@@ -80,9 +78,7 @@ class BoardView : GridLayout {
         cardsToFlip -= 2
         flippedCards[0].visibility = View.INVISIBLE
         flippedCards[1].visibility = View.INVISIBLE
-        if (cardsToFlip == 0) {
-            EventBus.getDefault().post(CompletionEvent())
-        }
+        if (cardsToFlip == 0) EventBus.getDefault().post(CompletionEvent())
         flippedCards.clear()
     }
 }

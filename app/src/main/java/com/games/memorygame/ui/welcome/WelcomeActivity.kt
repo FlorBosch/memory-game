@@ -16,23 +16,15 @@ import kotlinx.android.synthetic.main.activity_welcome.btn_start
 import kotlinx.android.synthetic.main.activity_welcome.btn_scores
 
 
-class WelcomeActivity : BaseActivity(), WelcomeMvpView {
-
-    @Inject lateinit var presenter: WelcomePresenter
+class WelcomeActivity : BaseActivity() {
 
     @Inject lateinit var boardConfiguration: BoardConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
-        activityComponent()!!.inject(this)
-        presenter.attachView(this)
+        activityComponent().inject(this)
         setUpConfig()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.detachView()
     }
 
     private fun setUpConfig() {

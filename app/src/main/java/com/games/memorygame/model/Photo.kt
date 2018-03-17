@@ -1,9 +1,14 @@
 package com.games.memorygame.model
 
-
 import android.net.Uri
 
-class Photo(val title: String, val farm: Int?, val server: String, val secret: String, val id: String) {
+data class Photos(val photo: List<Photo>)
+
+class Photo(val title: String,
+            private val farm: Int?,
+            private val server: String,
+            private val secret: String,
+            val id: String) {
 
     val url: Uri
         get() = Uri.parse(String.format(FORMAT_FLICKR_PHOTO_URL, farm.toString(),
